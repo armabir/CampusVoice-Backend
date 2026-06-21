@@ -50,4 +50,10 @@ public class ComplaintController {
     public List<Complaint> fetchAllComplaints() {
         return complaintService.getAllComplaints();
     }
+
+    // New Endpoint: Update Status
+    @PatchMapping("/{id}/status")
+    public Complaint updateStatus(@PathVariable String id, @RequestParam String status) {
+        return complaintService.updateComplaintStatus(id, status);
+    }
 }
