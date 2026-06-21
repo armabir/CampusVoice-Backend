@@ -53,4 +53,9 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
         }
     }
+
+    @GetMapping("/test")
+    public String test(){
+        return "Hello!";
+    }
 }
